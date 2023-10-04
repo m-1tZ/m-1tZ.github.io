@@ -1,5 +1,5 @@
 baseurl      = "https://m-1tZ.github.io"
-title   = "Hello Friend NG"
+title   = "Title"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -28,7 +28,7 @@ enableRobotsTXT = true
 enableGitInfo   = false
 enableEmoji     = true
 enableMissingTranslationPlaceholders = false
-disableRSS     = false
+disableRSS     = true
 disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
@@ -37,7 +37,7 @@ disableHugoGeneratorInject = false
   posts = "/posts/:year/:month/:title/"
 
 [author]
-  name = "Jane Doe"
+  name = "m1tZ"
 
 [blackfriday]
   hrefTargetBlank = true
@@ -55,13 +55,13 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Nice theme for homepages and blogs"
-  keywords = ""
+  description = "A blog that highlights some research and found vulnerabilities"
+  keywords = "blog, hacking, hacker, homepage"
   images = [""]
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Hello Friend NG"
+  homeSubtitle = "Subtitle"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -94,7 +94,7 @@ disableHugoGeneratorInject = false
   #
   # Enables the global language menu.
   #
-  enableGlobalLanguageMenu = true
+  enableGlobalLanguageMenu = false
 
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
@@ -120,10 +120,10 @@ disableHugoGeneratorInject = false
     author = true
 
     topText = []
-    bottomText = [
-      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
-      "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
-    ]
+    # bottomText = [
+    #   "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+    #   "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
+    # ]
 
   # Colors for favicons
   #
@@ -186,7 +186,7 @@ disableHugoGeneratorInject = false
 
 [languages]
   [languages.en]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = "Subtitle"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
