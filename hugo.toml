@@ -1,5 +1,5 @@
 baseurl      = "https://blog.m1tz.com"
-title   = "Title"
+title   = "m1tZ"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -55,13 +55,13 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "A blog that highlights some research and found vulnerabilities"
+  description = "A blog about security vulnerabilities and security research"
   keywords = "blog, hacking, hacker, homepage"
   images = [""]
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Subtitle"
+  homeSubtitle = "This is a blog about vulnerabilities and some security research - enjoy!"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
