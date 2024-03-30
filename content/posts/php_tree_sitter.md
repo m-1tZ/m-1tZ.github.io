@@ -1,7 +1,6 @@
 +++
-title = "How to do win your PHP source code audit - the modern way"
-date = "2023-10-04"
-aliases = ["PHP SAST"]
+title = "How to win your PHP source code audit - the modern way"
+date = "2024-30-03"
 [ author ]
   name = "m1tz"
 +++
