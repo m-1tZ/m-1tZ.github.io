@@ -1,7 +1,7 @@
 +++
 title = "How to win your next PHP source code audit - the modern way"
 date = "2024-30-03"
-aliases = ["php sast", "php tree-sitter"]
+aliases = ["php-sast","tree-sitter"]
 [ author ]
   name = "m1tz"
 +++
