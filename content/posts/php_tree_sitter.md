@@ -5,7 +5,7 @@ date = "2024-30-03"
   name = "m1tz"
 +++
 
-# How to do win your PHP source code audit - the modern way
+# How to win your PHP source code audit - the modern way
 Nowadays source code audits are often assisted by code analysis engines, such as [CodeQL](https://codeql.github.com/). However, CodeQL requires for compiled languages a buildable environment that is often not given. As of the day of writing, no PHP language support was added to CodeQL and thus an alternative has to be found.
 During the long weekend, I deep-dived into [Tree-sitter](https://tree-sitter.github.io/) a parser generator tool with support for various languages. Thankfully Tree-sitter can be used from Python and the [PHP grammar](https://github.com/tree-sitter/tree-sitter-php) is available officially. This sounds like a nice fit for our use case.
 
