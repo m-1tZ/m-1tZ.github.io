@@ -1,11 +1,11 @@
 +++
-title = "How to win your PHP source code audit - the modern way"
+title = "How to win your next PHP source code audit - the modern way"
 date = "2024-30-03"
+aliases = ["php sast", "php tree-sitter"]
 [ author ]
   name = "m1tz"
 +++
 
-# How to win your PHP source code audit - the modern way
 Nowadays source code audits are often assisted by code analysis engines, such as [CodeQL](https://codeql.github.com/). However, CodeQL requires for compiled languages a buildable environment that is often not given. As of the day of writing, no PHP language support was added to CodeQL and thus an alternative has to be found.
 During the long weekend, I deep-dived into [Tree-sitter](https://tree-sitter.github.io/) a parser generator tool with support for various languages. Thankfully Tree-sitter can be used from Python and the [PHP grammar](https://github.com/tree-sitter/tree-sitter-php) is available officially. This sounds like a nice fit for our use case.
 
@@ -31,7 +31,7 @@ function get($name)
 ```
 
 Which results in the *sexpr* or *sexp* tree structure:
-```
+```plaintext
 (program
   (php_tag)
   (expression_statement
@@ -89,7 +89,7 @@ In Python this results in a list of nodes with sub-nodes, sub-sub-nodes, etc.
 ]
 ```
 There are plenty of node types, such as:
-```
+```plaintext
 expression_statement
 binary_expression
 compound_statement
@@ -132,7 +132,7 @@ return_type
 
 # Queries
 After some basics, it is finally time to write some queries that support in source code analysis. As an example, we take a typical security pitfall such as the `add_action('admin_init', [CALLBACK_FUNCTION]);` from WordPress. A common misunderstanding is that the callback of the hook is called whenever a user, authenticated as admin, visits an administrative page. This might sound appropriate, however, the hook is triggered upon any page visit on path `/wp-admin/*` unauthenticated. For attackers, the callback is pretty interesting as it can execute code unauthorized context if no checks are implemented properly.
-Tree-sitter assists in finding these vulnerable sources with node types *function_call_expression*. This means we have to walk the tree of nodes and stop by this type, get the *function* field with `node.child_by_field_name("function")`, and obtain the *start_byte* and *end_byte*. With this information, we can obtain the name of the function with Python's slicing mechanism that is applied to the source code with `file_content[node.child_by_field_name("function").start_byte:node.child_by_field_name("function").end_byte].decode()`. The same can be applied with arguments `node.child_by_field_name("arguments")`, resulting in a list of arguments from that specific function.
+Tree-sitter assists in finding these vulnerable sources with node types *function_call_expression*. This means we have to walk the tree of nodes and stop by this type, get the *function* field with `$f = node.child_by_field_name("function")`, and obtain the *start_byte* and *end_byte*. With this information, we can obtain the name of the function with Python's slicing mechanism that is applied to the source code with `file_content[$f.start_byte:$f.end_byte].decode()`. The same can be applied with arguments `node.child_by_field_name("arguments")`, resulting in a list of arguments from that specific function.
 
 Putting all together results in the following Python snippet:
 
