@@ -1,7 +1,7 @@
 +++
 title = "How to win your next PHP source code audit - the modern way"
-date = "2024-30-03"
-aliases = ["php-sast","tree-sitter"]
+date = "2023-10-04"
+aliases = ["tree-sitter"]
 [ author ]
   name = "m1tz"
 +++
@@ -9,10 +9,10 @@ aliases = ["php-sast","tree-sitter"]
 Nowadays source code audits are often assisted by code analysis engines, such as [CodeQL](https://codeql.github.com/). However, CodeQL requires for compiled languages a buildable environment that is often not given. As of the day of writing, no PHP language support was added to CodeQL and thus an alternative has to be found.
 During the long weekend, I deep-dived into [Tree-sitter](https://tree-sitter.github.io/) a parser generator tool with support for various languages. Thankfully Tree-sitter can be used from Python and the [PHP grammar](https://github.com/tree-sitter/tree-sitter-php) is available officially. This sounds like a nice fit for our use case.
 
-Previous research on this topic was done by [@TheLaluka](https://twitter.com/TheLaluka) in this [video](https://www.youtube.com/watch?v=tlxP4HvzfFA)
+Previous research on this topic was done by [@TheLaluka](https://twitter.com/TheLaluka) in this [video](https://www.youtube.com/watch?v=tlxP4HvzfFA).
 
 # Basics
-Tree-sitter parses code based on implemented code grammars and builds syntax trees out of nodes, which can then be queried and traversed. These trees are structured as so-called [S-expressions](https://en.wikipedia.org/wiki/S-expression) which is a notation for tree-structured data. As an example, the following PHP snippet is parsed into the aforementioned structure:
+Tree-sitter parses code based on implemented code grammars and builds syntax trees out of nodes, which can then be queried and traversed. In the context of programming languages, a code grammar refers to a formal specification of the language's syntax rules. This specification defines how valid programs in the language should be structured. The built syntax trees are structured as so-called [S-expressions](https://en.wikipedia.org/wiki/S-expression) which is a notation for tree-structured data. As an example, the following PHP snippet is parsed into the aforementioned structure:
 
 ```php
 <?php
@@ -120,7 +120,7 @@ visibility_modifier
 ```
 
 ## Node Field Names
-Many grammars assign unique field names to particular nodes to make nodes easier to analyze. That's the same with the provided PHP grammar, for example, with `function_call_node.child_by_field_name("arguments")`. There are a few fields that I know of:
+Many grammars assign unique field names to particular nodes to make nodes easier to analyze. That's the same with the provided PHP grammar, for example, with `node.child_by_field_name("arguments")`. There are a few fields that I know of:
 ```
 name
 parameters
@@ -131,7 +131,7 @@ return_type
 
 
 # Queries
-After some basics, it is finally time to write some queries that support in source code analysis. As an example, we take a typical security pitfall such as the `add_action('admin_init', [CALLBACK_FUNCTION]);` from WordPress. A common misunderstanding is that the callback of the hook is called whenever a user, authenticated as admin, visits an administrative page. This might sound appropriate, however, the hook is triggered upon any page visit on path `/wp-admin/*` unauthenticated. For attackers, the callback is pretty interesting as it can execute code unauthorized context if no checks are implemented properly.
+After covering some basics, it is finally time to write some queries that can assist in the source code analysis process. As an example, we take a typical security pitfall such as the `add_action('admin_init', [CALLBACK_FUNCTION]);` from WordPress. A common misunderstanding is that the callback of the hook is called whenever a user, authenticated as admin, visits an administrative page. This might sound appropriate, however, the hook is triggered upon any page visit on path `/wp-admin/*` unauthenticated. For attackers, the callback is interesting as it can execute code in unauthorized context.
 Tree-sitter assists in finding these vulnerable sources with node types *function_call_expression*. This means we have to walk the tree of nodes and stop by this type, get the *function* field with `$f = node.child_by_field_name("function")`, and obtain the *start_byte* and *end_byte*. With this information, we can obtain the name of the function with Python's slicing mechanism that is applied to the source code with `file_content[$f.start_byte:$f.end_byte].decode()`. The same can be applied with arguments `node.child_by_field_name("arguments")`, resulting in a list of arguments from that specific function.
 
 Putting all together results in the following Python snippet:
@@ -161,7 +161,10 @@ extract_function_calls(php_file, tree.root_node, asdf, file_content, "add_action
 ```
 
 
-# References
+# Summary
+I showed how Tree-sitter can be used to assist in source code analysis processes and included example functions that can be made use of. This very same methodology can be applied to any other languages that come along with Tree-sitter grammar support. Even though CodeQL is the preferred way to go, CodeQL requires a compilable project for compiled languages such as Java, however, Tree-sitter does not.
+
+# Some more references
 - Setup steps can be taken from [Python Tree-sitter](https://github.com/tree-sitter/py-tree-sitter).
 - [Tree-sitter Python bindings](https://github.com/tree-sitter/py-tree-sitter)
 - [Tree-sitter PHP grammar](https://github.com/tree-sitter/tree-sitter-php)
