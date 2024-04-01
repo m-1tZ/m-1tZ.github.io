@@ -1,5 +1,6 @@
 baseurl      = "https://blog.m1tz.com"
 title   = "m1tz's blog"
+author = "m1tz"
 copyright = "2023"
 languageCode = "en"
 DefaultContentLanguage = "en"
