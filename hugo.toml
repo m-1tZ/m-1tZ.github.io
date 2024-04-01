@@ -1,6 +1,8 @@
 baseurl      = "https://blog.m1tz.com"
 title   = "m1tz's blog"
-languageCode = "en-us"
+copyright = "2023"
+languageCode = "en"
+DefaultContentLanguage = "en"
 theme = "hello-friend-ng"
 
 PygmentsCodeFences = true
