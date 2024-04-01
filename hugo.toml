@@ -8,7 +8,9 @@ PygmentsStyle = "monokai"
 
 paginate  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+
+subtitle  = "Vulnerabilities and security research"
+copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 # googleAnalytics = ""
 # disqusShortname = ""
@@ -188,7 +190,7 @@ disableHugoGeneratorInject = false
       subtitle  = "Vulnerabilities and security research"
       copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
-#rel="noopener">CC BY-NC 4.0</a>'
+
 
 [menu]
   [[menu.main]]
