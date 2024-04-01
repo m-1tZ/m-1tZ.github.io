@@ -1,7 +1,5 @@
 baseurl      = "https://blog.m1tz.com"
 title   = "m1tz's blog"
-author = "m1tz"
-copyright = "2023"
 languageCode = "en"
 DefaultContentLanguage = "en"
 theme = "hello-friend-ng"
@@ -35,6 +33,9 @@ disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
 
+[author]
+  name = "m1tz"
+
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
@@ -48,6 +49,8 @@ disableHugoGeneratorInject = false
   dateformShort   = "Jan 2"
   dateformNum     = "02-01-2006"
   dateformNumTime = "02-01-2006 15:04"
+
+  Copyright = "2023"
 
   # Metadata mostly used in document's head
   # 
@@ -110,7 +113,7 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = true
+    trademark = 2023
     rss = true
     copyright = true
     author = true
