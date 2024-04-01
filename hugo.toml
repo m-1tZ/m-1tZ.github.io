@@ -1,5 +1,5 @@
 baseurl      = "https://blog.m1tz.com"
-title   = "m1tz"
+title   = "m1tz's blog"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -45,13 +45,6 @@ disableHugoGeneratorInject = false
   dateformShort   = "Jan 2"
   dateformNum     = "02-01-2006"
   dateformNumTime = "02-01-2006 15:04"
-
-  subtitle  = "Vulnerabilities and security research"
-  copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"'
-  rel = '"noopener">CC BY-NC 4.0</a>'
-
-  [params.author]
-    name = "m1tz"
 
   # Metadata mostly used in document's head
   # 
@@ -133,7 +126,7 @@ disableHugoGeneratorInject = false
     theme = "#1b1c1d"
 
   [params.logo]
-    logoMark     = ">"
+    logoMark     = ""
     logoText     = "$ cd /home/"
     logoHomeLink = "/"
     # Set true to remove the logo cursor entirely.
@@ -186,10 +179,11 @@ disableHugoGeneratorInject = false
 
 [languages]
   [languages.en]
-    weight    = 1
+    subtitle  = "Vulnerabilities and security research"
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
     [languages.en.params]
-      subtitle  = "Vulnerabilities and security research"
-      copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    subtitle  = "Vulnerabilities and security research"
 
 
 
