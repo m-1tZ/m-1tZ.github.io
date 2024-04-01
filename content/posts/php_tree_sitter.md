@@ -163,8 +163,8 @@ extract_function_calls(php_file, tree.root_node, asdf, file_content, "add_action
 # Summary
 I showed how Tree-sitter can be used to assist in source code analysis processes and included example functions that can be made use of. This very same methodology can be applied to any other languages that come along with Tree-sitter grammar support. Even though CodeQL is the preferred way to go, CodeQL requires a compilable project for compiled languages such as Java, however, Tree-sitter does not.
 
-# Some more references
-- Setup steps can be taken from [Python Tree-sitter](https://github.com/tree-sitter/py-tree-sitter).
+# More references
+- Tree-sitter setup steps can be taken from [Python Tree-sitter](https://github.com/tree-sitter/py-tree-sitter).
 - [Tree-sitter Python bindings](https://github.com/tree-sitter/py-tree-sitter)
 - [Tree-sitter PHP grammar](https://github.com/tree-sitter/tree-sitter-php)
 
