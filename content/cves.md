@@ -6,5 +6,5 @@ aliases = ["CVEs"]
   name = "m1tz"
 +++
 
-- **CVE-2024-2098** - Authentication Bypass viaLogic Flaw
+- **CVE-2024-2098** - Authentication Bypass via Logic Flaw in WordPress Plugin
 - **CVE-2024-X** - SQL Injection in X (soon)
