@@ -60,12 +60,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production 
         run: |
-          hugo \
-            --gc \
-            --minify \
-            --forceSyncStatic \
-            --ignoreCache \    
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+          hugo --gc --minify --ignoreCache --baseURL "${{ steps.pages.outputs.base_url }}/"          
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
