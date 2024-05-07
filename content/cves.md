@@ -7,4 +7,4 @@ aliases = ["CVEs"]
 +++
 
 - **CVE-2024-2098** - Authentication Bypass via Logic Flaw in WordPress Plugin
-- **CVE-2024-X** - SQL Injection in X (soon)
+- **CVE-2024-31961** - SQL Injection
