@@ -172,20 +172,20 @@ disableHugoGeneratorInject = false
     url  = "https://github.com/m-1tZ"
 
   [[params.social]]
-    name = "bluesky"
-    url  = "https://bsky.app/profile/m1tzzz.bsky.social"
-
-  [[params.social]]
-    name = "intigr"
-    url  = "https://app.intigriti.com/profile/m1tz"
-
-  [[params.social]]
     name = "hackerone"
     url  = "https://hackerone.com/m1tz?type=user"
 
-  [[params.social]]
-    name = "ywh"
-    url  = "https://yeswehack.com/hunters/m1tz"
+#  [[params.social]]
+#    name = "bluesky"
+#    url  = "https://bsky.app/profile/m1tzzz.bsky.social"
+#
+#  [[params.social]]
+#    name = "intigr"
+#    url  = "https://app.intigriti.com/profile/m1tz"
+#
+#  [[params.social]]
+#    name = "ywh"
+#    url  = "https://yeswehack.com/hunters/m1tz"
 
 
 [languages]
