@@ -184,7 +184,7 @@ disableHugoGeneratorInject = false
     url  = "https://hackerone.com/m1tz?type=user"
 
   [[params.social]]
-    name = "ycombinator"
+    name = "ywh"
     url  = "https://yeswehack.com/hunters/m1tz"
 
 
