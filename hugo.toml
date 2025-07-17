@@ -87,7 +87,7 @@ disableHugoGeneratorInject = false
   # generate the buttons here: https://sharingbuttons.io
   # and add them into your own `layouts/partials/sharing-buttons.html`
   #
-  enableSharingButtons = true
+  enableSharingButtons = false
 
   # Global language menu
   #
@@ -186,8 +186,6 @@ disableHugoGeneratorInject = false
   [[params.social]]
     name = "ycombinator"
     url  = "https://yeswehack.com/hunters/m1tz"
-
-
 
 
 [languages]
