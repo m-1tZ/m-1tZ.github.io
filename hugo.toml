@@ -50,7 +50,7 @@ disableHugoGeneratorInject = false
   dateformNum     = "02-01-2006"
   dateformNumTime = "02-01-2006 15:04"
 
-  Copyright = "2023"
+  Copyright = "2025"
 
   # Metadata mostly used in document's head
   # 
@@ -113,7 +113,7 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = 2023
+    trademark = 2025
     rss = true
     copyright = true
     author = true
