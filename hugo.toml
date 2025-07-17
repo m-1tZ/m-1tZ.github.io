@@ -168,32 +168,11 @@ disableHugoGeneratorInject = false
     url  = "https://twitter.com/_m1tZ"
 
   [[params.social]]
-    name = "bluesky"
-    url  = "https://bsky.app/profile/m1tzzz.bsky.social"
-
-  [[params.social]]
-    name = "intigr"
-    url  = "https://app.intigriti.com/profile/m1tz"
-
-  [[params.social]]
-    name = "hackerone"
-    url  = "https://hackerone.com/m1tz?type=user"
-
-  [[params.social]]
-    name = "ycombinator"
-    url  = "https://yeswehack.com/hunters/m1tz"
-
-  [[params.social]]
     name = "github"
     url  = "https://github.com/m-1tZ"
 
-#   [[params.social]]
-#     name = "linkedin"
-#     url  = "https://www.linkedin.com/"
 
-#   [[params.social]]
-#     name = "stackoverflow"
-#     url  = "https://www.stackoverflow.com/"
+
 
 [languages]
   [languages.en]
