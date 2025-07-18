@@ -280,4 +280,4 @@ Firebase is a powerful backend platform, but the default configurations are ofte
 - https://blog.deesee.xyz/android/automation/2019/08/03/firebase-remote-config-dump.html
 
 
-**Special thanks** to @TightropeMonkey for proofreading
+**Special thanks** to [@TightropeMonkey](https://x.com/TightropeMonkey) for proofreading
