@@ -1,6 +1,6 @@
 +++
 title = "Hacking Firebase Projects: Enumeration and Common Misconfigurations"
-date = "2025-07-17"
+date = "2025-07-18"
 [ author ]
   name = "m1tz"
 +++
