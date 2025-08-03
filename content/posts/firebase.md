@@ -213,8 +213,8 @@ asia-southeast1.firebasedatabase.ap
 Again, security rules can be defined and are used to differentiate access for different users. To avoid duplication, this topic is not covered again. Contrary to the other products, security rules can be managed via the [REST API](https://firebase.google.com/docs/reference/rest/database/#section-security-rules), which opens up a new attack surface. Users with a session are able to pass their `idToken` to the requests and read or write security rules (if improperly configured):
 
 ```bash
-$ curl 'https://<projectId>.firebaseio/.settings/rules.json?auth=<idToken>'
-$ curl -X PUT -d '{ "rules": { ".read": true } }' 'https://<projectId>.firebaseio/.settings/rules.json?auth=<idToken>'
+$ curl 'https://<projectId>.firebaseio.com/.settings/rules.json?auth=<idToken>'
+$ curl -X PUT -d '{ "rules": { ".read": true } }' 'https://<projectId>.firebaseio.com/.settings/rules.json?auth=<idToken>'
 ```
 
 

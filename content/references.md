@@ -1,7 +1,7 @@
 +++
-title = "CVEs"
+title = "References"
 date = "2024-04-01"
-aliases = ["CVEs"]
+aliases = ["references"]
 [ author ]
   name = "m1tz"
 +++

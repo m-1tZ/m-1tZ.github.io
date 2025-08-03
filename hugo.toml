@@ -208,6 +208,6 @@ disableHugoGeneratorInject = false
     name       = "Posts"
     url        = "posts/"
   [[menu.main]]
-    identifier = "cves"
-    name       = "CVEs"
-    url        = "cves/"
+    identifier = "references"
+    name       = "Referencess"
+    url        = "references/"
