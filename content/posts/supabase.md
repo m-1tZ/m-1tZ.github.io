@@ -5,7 +5,6 @@ date = "2025-10-07"
   name = "m1tz"
 +++
 
-# A Hands-On Edition: Will Supabase Be the Next Firebase (At Least in Terms of Security)?
 It all started with my good colleague *@schniggie* who's got my attention with an [X post](https://x.com/schniggie/status/1952837729462718581/photo/1) earlier that year. Until then I rarely heared of Supabase, but let us start from the scratch.
 
 Firebase changed the way developers think about backend infrastructure: auth, database, storage, and functions - all *serverless* and tied together with a simple SDK. But over the last few years, Supabase has been gaining momentum as an open-source, Postgres-based alternative.
