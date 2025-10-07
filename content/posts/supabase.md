@@ -16,7 +16,7 @@ In this post we will cover Supabase’s history and give a concise overview of h
 
 # History
 
-Supabase launched in 2020 with the pitch: [*The open source Firebase alternative.*] (https://supabase.com/blog/supabase-how-we-launch). Instead of building on proprietary infra, Supabase wraps around PostgreSQL with APIs for:
+Supabase launched in 2020 with the pitch: [*The open source Firebase alternative.*](https://supabase.com/blog/supabase-how-we-launch). Instead of building on proprietary infra, Supabase wraps around PostgreSQL with APIs for:
 - Database - Auto-generated REST & GraphQL APIs on top of Postgres.
 - Auth - User management with JWTs, signup, login, OAuth.
 - Storage - S3-compatible object storage with RLS.
