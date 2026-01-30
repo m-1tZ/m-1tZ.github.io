@@ -10,3 +10,4 @@ aliases = ["references"]
 - **CVE-2024-2098** - Authentication Bypass in WordPress Plugin [Download Manager](https://de.wordpress.org/plugins/download-manager/)
 - **CVE-2024-31961** - SQL Injection in Sonic Shopfloor.guide
 - **CVE-2025-20994** - [Android improper handling of insufficient permission led to arbitrary read and write of files](https://nvd.nist.gov/vuln/detail/CVE-2025-20994)
+- **CVE-2026-1616** - NGINX query string LFI via path traversal in Open Security Issue Management (OSIM) prior v2025.9.0
